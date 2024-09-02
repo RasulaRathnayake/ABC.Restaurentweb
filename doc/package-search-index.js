@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"net.javaguides.usersregister.controller"},{"l":"net.javaguides.usersregister.dao"},{"l":"net.javaguides.usersregister.model"}];updateSearchResults();
