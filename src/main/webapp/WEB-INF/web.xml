@@ -32,6 +32,16 @@
     <url-pattern>/api/*</url-pattern>
   </servlet-mapping>
 
+  <!-- New TestDBServlet Declaration -->
+  <servlet>
+    <servlet-name>TestDBServlet</servlet-name>
+    <servlet-class>net.javaguides.usersregister.controller.TestDBServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TestDBServlet</servlet-name>
+    <url-pattern>/testDB</url-pattern>
+  </servlet-mapping>
+
   <!-- Welcome file list -->
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
@@ -41,4 +51,6 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+
 </web-app>
+
