@@ -5,7 +5,7 @@ import java.sql.Timestamp;
 public class Payment {
     private int paymentId;
     private int userId;
-    private int reservationId; // Add this field
+    private int reservationId; 
     private double amount;
     private String paymentMethod;
     private String paymentStatus;
@@ -28,11 +28,11 @@ public class Payment {
         this.userId = userId;
     }
 
-    public int getReservationId() { // Add getter for reservationId
+    public int getReservationId() { 
         return reservationId;
     }
 
-    public void setReservationId(int reservationId) { // Add setter for reservationId
+    public void setReservationId(int reservationId) { 
         this.reservationId = reservationId;
     }
 
@@ -64,7 +64,7 @@ public class Payment {
         return paymentDate;
     }
 
-    public void setPaymentDate(Timestamp paymentDate) { // Ensure it accepts Timestamp
+    public void setPaymentDate(Timestamp paymentDate) { 
         this.paymentDate = paymentDate;
     }
 }

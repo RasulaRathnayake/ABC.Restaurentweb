@@ -29,7 +29,7 @@ public class RespondToQueryServlet extends HttpServlet {
             QueryDAO queryDAO = new QueryDAO(conn);
             queryDAO.respondToQuery(queryId, responseText);
 
-            resp.sendRedirect("/WEB-INF/views/admin/adminQueries.jsp"); // Added leading slash
+            resp.sendRedirect("/WEB-INF/views/admin/adminQueries.jsp");
         } catch (SQLException e) {
             throw new ServletException(e);
         }

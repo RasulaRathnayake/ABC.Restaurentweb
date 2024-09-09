@@ -22,7 +22,7 @@ public class PaymentDAO {
             statement.setInt(1, payment.getUserId());
             statement.setInt(2, payment.getReservationId());
             statement.setDouble(3, payment.getAmount());
-            statement.setTimestamp(4, new Timestamp(payment.getPaymentDate().getTime())); // Use Timestamp for payment_date
+            statement.setTimestamp(4, new Timestamp(payment.getPaymentDate().getTime())); 
             statement.setString(5, payment.getPaymentMethod());
             statement.executeUpdate();
         }
@@ -40,7 +40,7 @@ public class PaymentDAO {
                 payment.setUserId(resultSet.getInt("user_id"));
                 payment.setReservationId(resultSet.getInt("reservation_id"));
                 payment.setAmount(resultSet.getDouble("amount"));
-                payment.setPaymentDate(resultSet.getTimestamp("payment_date")); // Retrieve as Timestamp
+                payment.setPaymentDate(resultSet.getTimestamp("payment_date")); 
                 payment.setPaymentMethod(resultSet.getString("payment_method"));
                 payments.add(payment);
             }

@@ -30,10 +30,9 @@ public class PaymentServlet extends HttpServlet {
         payment.setAmount(amount);
         payment.setPaymentMethod(paymentMethod);
 
-        // Convert Date to Timestamp
+        
         Date currentDate = new Date();
-        payment.setPaymentDate(new Timestamp(currentDate.getTime())); // Set as Timestamp
-
+        payment.setPaymentDate(new Timestamp(currentDate.getTime())); 
         try (Connection conn = DBUtils.getConnection()) {
             PaymentDAO paymentDAO = new PaymentDAO(conn);
             paymentDAO.addPayment(payment);

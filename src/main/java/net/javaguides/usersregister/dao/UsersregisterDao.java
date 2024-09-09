@@ -24,9 +24,8 @@ public class UsersregisterDao {
         }
     }
     
-    // Method to get a database connection
-    private Connection getConnection() throws SQLException {
-        // Replace with your actual database connection details
-        return DriverManager.getConnection("jdbc:mysql://localhost:3306/your_database", "username", "password");
+    // get a database connection
+    private Connection getConnection() throws SQLException {      
+        return DriverManager.getConnection("jdbc:mysql://localhost:3306/abc_restaurent", "root", "rasula13675");
     }
 }

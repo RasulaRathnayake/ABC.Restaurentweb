@@ -60,7 +60,7 @@ public class ReservationServlet extends HttpServlet {
         try {
             List<Reservation> reservations = reservationDao.getReservationsByUserId(userId);
             request.setAttribute("reservations", reservations);
-            RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/viewReservations.jsp"); // Correct path
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/viewReservations.jsp"); 
             dispatcher.forward(request, response);
         } catch (Exception e) {
             throw new ServletException("Error retrieving reservations", e);

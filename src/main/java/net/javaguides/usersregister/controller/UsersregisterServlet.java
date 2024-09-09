@@ -16,7 +16,7 @@ public class UsersregisterServlet extends HttpServlet {
 
     @Override
     public void init() {
-        usersregisterdao = new UsersregisterDao(); // Initialize DAO
+        usersregisterdao = new UsersregisterDao(); 
     }
 
     @Override
@@ -34,7 +34,7 @@ public class UsersregisterServlet extends HttpServlet {
         String role = request.getParameter("role");
 
         Usersregister user = new Usersregister();
-        user.setUser_id(user_id);  // Correct method call on instance
+        user.setUser_id(user_id);  
         user.setName(name);
         user.setEmail(email);
         user.setPassword(password);

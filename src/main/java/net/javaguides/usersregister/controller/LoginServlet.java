@@ -22,10 +22,10 @@ public class LoginServlet extends HttpServlet {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         
-        // Ideally, hash the password here before checking against the database
+       
 
         try (Connection connection = DBUtils.getConnection()) {
-            String sql = "SELECT * FROM users WHERE email = ? AND password = ?"; // In production, password should be hashed and stored securely
+            String sql = "SELECT * FROM users WHERE email = ? AND password = ?"; 
             try (PreparedStatement statement = connection.prepareStatement(sql)) {
                 statement.setString(1, email);
                 statement.setString(2, password);
