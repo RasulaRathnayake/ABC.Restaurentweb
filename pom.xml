@@ -28,11 +28,18 @@
             <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
             <version>2.0.0</version>
         </dependency>
-        <dependency>
+      <!--  <dependency>
             <groupId>org.apache.taglibs</groupId>
             <artifactId>taglibs-standard-impl</artifactId>
             <version>1.2.5</version>
-        </dependency>
+        </dependency> -->
+        
+        <!-- JSTL Implementation -->
+<dependency>
+    <groupId>org.apache.taglibs</groupId>
+    <artifactId>taglibs-standard-impl</artifactId>
+    <version>1.2.5</version>
+</dependency>
 
         <!-- MySQL Connector -->
         <dependency>
@@ -61,12 +68,39 @@
         </dependency>
 
         <!-- Jakarta RESTful Web Services API -->
-        <dependency>
+        <!--<dependency>
             <groupId>jakarta.ws.rs</groupId>
             <artifactId>jakarta.ws.rs-api</artifactId>
             <version>3.1.0</version>
-        </dependency>
+        </dependency> -->
+
+        <!-- New Dependency with Exclusion -->
+       <!-- <dependency>
+            <groupId>some.group</groupId>
+            <artifactId>some-artifact</artifactId>
+            <version>1.0.0</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>jakarta.servlet.jsp.jstl</groupId>
+                    <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>-->
+
     </dependencies>
+
+    <repositories>
+        <!-- Maven Central Repository -->
+        <repository>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+        </repository>
+        <!-- Sonatype Repository -->
+        <repository>
+            <id>sonatype</id>
+            <url>https://oss.sonatype.org/content/repositories/releases/</url>
+        </repository>
+    </repositories>
 
     <build>
         <plugins>
